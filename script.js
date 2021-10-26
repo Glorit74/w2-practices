@@ -1,24 +1,20 @@
-function fastLoad(text) {
-  console.log(text);
-  return "Text logged";
-}
-function loadEvent() {
-    console.log('the page has loaded');
-   
-    function onClick() {
-      document.getElementById("menu-btn").classList.toggle("clicked");
-    const fastLogResult = "Ezt akarjuk kiírni";
-    console.log(fastLogResult);
-    };
-    // function onClickToggle(event) {
-      //   event.getElementById("menu-btn").classList.toggle("clicked");
-      // };
-      document.getElementById("menu-btn").addEventListener("click", onClick);
-      
-      // document.getElementById("menu-btn").addEventListener("click", function(){
-        //   document.getElementById("menu-btn").classList.toggle("onclicked");
-        // });
-        
-      }; 
-fastLoad("Na ez minden függvényen kívül van");      
-window.addEventListener("load", loadEvent);
+function onClickToggle() {
+    const body = document.getElementById("bodyId");
+    body.classList.toggle("clicked");
+
+    if (body.getAttribute("class") == "clicked") {
+        document.querySelector("#menu-btn").style.backgroundColor = "red";
+        document.querySelector("#nav").style.setProperty("display", "none");
+      }
+      else {
+        document.querySelector("#menu-btn").style.backgroundColor = "black"; 
+        document.querySelector("#nav").style.setProperty("display", "inline");
+     }
+  }
+  
+  function loadEvent() {
+    // console.log('the page has loaded');
+    document.getElementById("menu-btn").addEventListener("click", onClickToggle);
+  }
+  
+  window.addEventListener("load", loadEvent);

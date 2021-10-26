@@ -52,9 +52,30 @@
       width: 40px;
       height: 40px;
       margin: 20px;
-
+      z-index: 10;
+      
       background-color: black;
   }
+
+  #menu-btn.clicked {
+    background-color: red;
+    }
+    
+  #nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 9;
+
+    background-color: blueviolet;
+  }
+
+  #nav.clicked {
+    right: 0;
+  }
+
   aside {
     width: 40%;
     padding-left: .5rem;
