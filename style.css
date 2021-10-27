@@ -8,7 +8,6 @@
     background: transparent;
 
     font-family: inherit;
-
     text-decoration: none;
   }
 
@@ -46,22 +45,21 @@
   }
 
   #menu-btn {
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      margin: 20px;
-      z-index: 10;
-      
-      background-color: black;
-  }
-
-  #menu-btn.clicked {
-    background-color: red;
-    }
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    border-radius: 5px;
+    z-index: 10;
     
+    background-color: black;
+    box-shadow: 2px 2px 5px grey;
+  }
+  
   #nav {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -69,28 +67,15 @@
     height: 100vh;
     z-index: 9;
 
-    background-color: blueviolet;
+    background-color: rgb(206, 97, 53);
   }
 
-  #nav.clicked {
-    right: 0;
+  #bodyId.clicked #nav {
+    display: inline;
+
   }
+  #bodyId.clicked #menu-btn{
+    background-color: red;
+    }
 
-  aside {
-    width: 40%;
-    padding-left: .5rem;
-    margin-left: .5rem;
-    float: right;
-    box-shadow: inset 5px 0 5px -5px #29627e;
-    font-style: italic;
-    color: #29627e;
-}
-
-aside > p {
-    margin: .5rem;
-}
-
-mark {
-  background-color: beige;
-  color: green;
-}
+ 
