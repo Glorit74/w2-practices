@@ -55,6 +55,8 @@
       z-index: 10;
       
       background-color: black;
+      border-radius: 3px;
+      box-shadow: 2px 2px 5px grey;
   }
 
   #menu-btn.clicked {
@@ -62,6 +64,7 @@
     }
     
   #nav {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -94,3 +97,28 @@ mark {
   background-color: beige;
   color: green;
 }
+
+header {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  padding: 20px;
+  margin: 30px;
+
+  border: 10px solid rgb(31, 114, 14);
+  background-color: rgb(190, 91, 111);
+
+  overflow: auto;
+
+}
+
+header .randomDiv2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+
+  background-color: black;
+}
+/*  header-en belül léptet a space */
